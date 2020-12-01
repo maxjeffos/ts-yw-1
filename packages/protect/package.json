@@ -1,0 +1,12 @@
+{
+  "name": "@jeff/protect",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "private": true,
+  "license": "private",
+  "scripts": {
+    "build": "tsc"
+  }
+}

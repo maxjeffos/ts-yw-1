@@ -1,0 +1,11 @@
+// this tsconfig file is responsible for building the whole workspace
+{
+  "extends": "./tsconfig.settings.json",
+  // note: this is included so that invoking the compiler in
+  // single project mode (rather than build mode) will fail.
+  "files": [],
+  "references": [
+    { "path": "packages/protect" },
+    { "path": "packages/cli" }
+  ]
+}
