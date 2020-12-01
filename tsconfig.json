@@ -4,6 +4,13 @@
   // note: this is included so that invoking the compiler in
   // single project mode (rather than build mode) will fail.
   "files": [],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": [
+    "./src/**/*"
+  ],
   "references": [
     { "path": "packages/protect" },
     { "path": "packages/cli" }
