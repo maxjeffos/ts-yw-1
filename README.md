@@ -7,6 +7,12 @@ yarn
 node packages/cli/dist/index.js
 ```
 
+Or you can do the same with npm 7:
+```
+npm install # using npm 7
+node packages/cli/dist/index.js
+```
+
 ## Extra Info
 
 - If stuff is not building, need to delete the `tsconfig.tsbuildinfo` files.
