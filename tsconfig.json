@@ -3,7 +3,6 @@
   "extends": "./tsconfig.settings.json",
   // note: this is included so that invoking the compiler in
   // single project mode (rather than build mode) will fail.
-  "files": [],
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src"
