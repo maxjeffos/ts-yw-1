@@ -3,14 +3,8 @@
 ## Commands to Run
 
 ```
-yarn
-node packages/cli/dist/index.js
-```
-
-Or you can do the same with npm 7:
-```
-npm install # using npm 7
-node packages/cli/dist/index.js
+npx npm@7 install
+./run.sh
 ```
 
 ## Extra Info
