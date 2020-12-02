@@ -20,6 +20,7 @@
   "license": "private",
   "private": false,
   "workspaces": [
+    ".",
     "packages/*"
   ],
   "dependencies": {
