@@ -1,4 +1,6 @@
 {
+  "name": "@jeff/sweetcli",
+  "version": "0.1.0",
   "description": "",
   "scripts": {
     "bootstrap": "lerna bootstrap",
@@ -16,7 +18,7 @@
   },
   "author": "",
   "license": "private",
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/*"
   ],
