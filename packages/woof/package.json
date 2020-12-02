@@ -1,5 +1,5 @@
 {
-  "name": "cli",
+  "name": "@jeff/woof",
   "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
@@ -8,8 +8,5 @@
   "license": "private",
   "scripts": {
     "build": "tsc"
-  },
-  "dependencies": {
-    "@jeff/protect": "*"
   }
 }

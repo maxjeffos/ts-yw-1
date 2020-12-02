@@ -13,6 +13,7 @@
   ],
   "references": [
     { "path": "packages/protect" },
-    { "path": "packages/cli" }
+    { "path": "packages/some-top-level-command" },
+    { "path": "packages/woof" }
   ]
 }
