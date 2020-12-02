@@ -1,6 +1,6 @@
 {
   "name": "@jeff/some-top-level-command",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,6 +10,6 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@jeff/protect": "*"
+    "@jeff/protect": "^0.1.0"
   }
 }
