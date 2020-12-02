@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "private": true,
+  "private": false,
   "license": "private",
   "scripts": {
     "build": "tsc"
