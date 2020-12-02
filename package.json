@@ -2,6 +2,10 @@
   "name": "@jeff/sweetcli",
   "version": "0.3.0",
   "description": "",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "rm -rf dist && rm -rf packages/*/{dist,tsconfig.tsbuildinfo}",
