@@ -25,8 +25,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn --version
-    - run: yarn
-    - run: node packages/cli/dist/index.js
-#     - run: npm ci
-#     - run: npm run build --if-present
-#     - run: npm test
+    - run: npm --version
+    - run: npx npm@7 install
+    - run: ./run.sh
