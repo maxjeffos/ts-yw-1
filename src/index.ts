@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // note: noe of these `@jeff/<project-name>` packages are even listed in the root package.json
 import { doProtect } from "@jeff/protect";
 import { doWoof } from "@jeff/woof";
