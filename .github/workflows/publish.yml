@@ -45,6 +45,7 @@ jobs:
     - run: npm --version
     - run: npm install -g lerna
     - run: which lerna
+    - run: npm install
     - run: npm set registry https://npm.pkg.github.com
     - run: npm get registry
 #     - run: login --scope=@maxjeffos --registry=https://npm.pkg.github.com
