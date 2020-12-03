@@ -3,8 +3,7 @@
 if [[ -d "dist" ]]
 then
     echo "dist directory exist. Proceeding with lerna publish..." 
+    npx lerna publish minor --yes
 else
     echo "dist directory does not exist - you need to run npm install first" 
 fi
-
-# npx lerna publish minor --yes
