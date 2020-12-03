@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build_test:
@@ -44,5 +42,7 @@ jobs:
     - run: npm --version
     - run: npm set registry https://npm.pkg.github.com
     - run: npm get registry https://npm.pkg.github.com
+    - run: npm login
     - run: npm whoami
+    
     # - run: ./publish.sh
