@@ -1,5 +1,5 @@
 {
-  "name": "@jeff/sweetcli",
+  "name": "@maxjeffos/sweetcli",
   "version": "0.8.0",
   "description": "",
   "files": [
@@ -51,6 +51,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maxjeffos/ts-yw-1.git"
+    "url": "ssh://git@github.com/maxjeffos/ts-yw-1.git"
   }
 }

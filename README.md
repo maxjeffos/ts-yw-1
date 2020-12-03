@@ -24,4 +24,4 @@ npx npm@7 install
       { "path": "../../packages/protect" },
     ]
     ```
-  - in the `cli` package, where you want to use the `protect` package, use `import { doProtect } from "@jeff/protect";` or equivalent (based on your import needs). Note that in this case, `@jeff/protect` is the full package name as defined in the `protect` package's `package.json`.
+  - in the `cli` package, where you want to use the `protect` package, use `import { doProtect } from "@maxjeffos/protect";` or equivalent (based on your import needs). Note that in this case, `@maxjeffos/protect` is the full package name as defined in the `protect` package's `package.json`.
