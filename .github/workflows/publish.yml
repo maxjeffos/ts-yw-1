@@ -42,7 +42,8 @@ jobs:
     - run: npm --version
     - run: npm set registry https://npm.pkg.github.com
     - run: npm get registry https://npm.pkg.github.com
-    - run: login --scope=@maxjeffos --registry=https://npm.pkg.github.com
-    - run: npm whoami
+#     - run: login --scope=@maxjeffos --registry=https://npm.pkg.github.com
+#     - run: npm whoami
+    - run: npm publish
     
-    # - run: ./publish.sh
+#     - run: ./publish.sh
