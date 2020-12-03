@@ -6,6 +6,10 @@
     "dist",
     "src"
   ],
+  "main": "dist/index.js",
+  "bin": {
+    "sweetcli": "dist/index.js"
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "rm -rf dist && rm -rf packages/*/{dist,tsconfig.tsbuildinfo}",
