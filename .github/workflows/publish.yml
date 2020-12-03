@@ -47,6 +47,6 @@ jobs:
     - run: npm get registry
 #     - run: login --scope=@maxjeffos --registry=https://npm.pkg.github.com
 #     - run: npm whoami
-    - run: npm publish
-    
-#     - run: ./publish.sh
+    - run: npm install -g lerna
+    - run: which lerna
+    - run: ./publish.sh
