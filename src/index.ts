@@ -5,8 +5,7 @@ import { doWoof } from "@jeff/woof";
 import { doTopLevelCommandThing } from "@jeff/some-top-level-command";
 
 function main() {
-  console.log("hello from root module");    
-  
+  console.log("hello from root module");
   doProtect();
   doWoof();
   doTopLevelCommandThing();
