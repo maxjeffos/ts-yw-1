@@ -57,6 +57,10 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    - run: npm login
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      
     - run: npm whoami
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
