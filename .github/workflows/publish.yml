@@ -53,17 +53,17 @@ jobs:
     - name: Configure NPM
       run: |
         echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" >> .npmrc
-        # echo '@maxjeffos:registry=https://npm.pkg.github.com' >> .npmrc
+        echo '@maxjeffos:registry=https://npm.pkg.github.com' >> .npmrc
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - run: npm login --registry=https://npm.pkg.github.com --scope=@maxjeffos
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+#     - run: npm login --registry=https://npm.pkg.github.com --scope=@maxjeffos
+#       env:
+#         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
-    - run: npm whoami
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+#     - run: npm whoami
+#       env:
+#         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     - run: lerna publish minor --yes
       env:
