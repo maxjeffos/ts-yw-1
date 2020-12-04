@@ -52,5 +52,8 @@
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/maxjeffos/ts-yw-1.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
