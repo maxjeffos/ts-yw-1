@@ -49,6 +49,10 @@ jobs:
     - run: npm install -g lerna
     - run: which lerna
     - run: npm install
+    - run: npm whoami
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
     - run: lerna publish minor --yes
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
