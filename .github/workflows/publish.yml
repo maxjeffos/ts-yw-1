@@ -21,7 +21,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-#     - run: npm --version
     - run: npm install -g npm@7
     - run: npx npm@7 install
     - run: ./run.sh
@@ -50,5 +49,6 @@ jobs:
     - run: npm install -g lerna
     - run: which lerna
     - run: npm install
-    - run: ./publish.sh
     - run: lerna publish minor --yes
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
