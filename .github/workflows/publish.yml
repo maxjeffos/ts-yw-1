@@ -57,7 +57,7 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - run: npm login
+    - run: npm login --registry=https://npm.pkg.github.com --scope=@maxjeffos
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
