@@ -39,17 +39,16 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+        registry-url: https://npm.pkg.github.com/
+
     - run: ls -la
     - run: git config --global user.email "${{ secrets.GH_USER_EMAIL }}"
     - run: git config --global user.name "${{ secrets.GH_USER }}"
-    - run: npm --version
+
     - run: npm install -g npm@7
     - run: npm --version
     - run: npm install -g lerna
     - run: which lerna
     - run: npm install
-    - run: npm set registry https://npm.pkg.github.com
-    - run: npm get registry
-#     - run: login --scope=@maxjeffos --registry=https://npm.pkg.github.com
-#     - run: npm whoami
     - run: ./publish.sh
+    - run: lerna publish minor --yes
