@@ -32,6 +32,9 @@
     "packages/*"
   ],
   "dependencies": {
+    "@maxjeffos/protect": "*",
+    "@maxjeffos/some-top-level-command": "*",
+    "@maxjeffos/woof": "*",
     "source-map-support": "^0.5.19"
   },
   "devDependencies": {
