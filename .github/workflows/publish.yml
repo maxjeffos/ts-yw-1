@@ -70,3 +70,13 @@ jobs:
     - run: lerna publish minor --yes --registry=https://npm.pkg.github.com
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+    - name: Create binaries with pkg
+      run: |
+        npx pkg .
+        ls -la
+
+    - name: Install ghr - for uploading GitHub artifacts
+      run: |
+        go get -u github.com/tcnksm/ghr
+        which ghr
