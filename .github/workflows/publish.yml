@@ -71,12 +71,12 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
+    - name: Install ghr - for uploading GitHub artifacts
+      run: |
+        which go
+        go version
+        
     - name: Create binaries with pkg
       run: |
         npx pkg .
         ls -la
-
-    - name: Install ghr - for uploading GitHub artifacts
-      run: |
-        go get -u github.com/tcnksm/ghr
-        which ghr
