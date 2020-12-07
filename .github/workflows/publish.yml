@@ -79,6 +79,26 @@ jobs:
         
     - name: Create binaries with pkg
       run: |
-        npx pkg -t node14-linux-x64 .
+        npx pkg -t node14-linux-x64 -o sweetcli-node14-linux-x64 .
         ls -la
 
+    - run: echo ${{github.repository}}
+
+    - name: Get Latest Release
+      id: latest_version
+      uses: abatilo/release-info-action@v1.3.0
+      with:
+        owner: maxjeffos
+        repo: ts-yw-1
+
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.latest_version.outputs.latest_tag }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+#         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./sweetcli-node14-linux-x64
+        asset_name: sweetcli-node14-linux-x64
+        asset_content_type: application/x-binary
