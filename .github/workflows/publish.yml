@@ -77,7 +77,8 @@ jobs:
         go version
         go get -u github.com/tcnksm/ghr
         
-#     - name: Create binaries with pkg
-#       run: |
-#         npx pkg .
-#         ls -la
+    - name: Create binaries with pkg
+      run: |
+        npx pkg -t node14-linux-x64 .
+        ls -la
+
