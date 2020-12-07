@@ -94,6 +94,11 @@ jobs:
     - name: Get latest tag
       run: ./scripts/get-latest-tag.sh
 
+    - name: Create release
+      run: |
+        echo "latest_release: ${latest_release}"        
+        gh release create $latest_release
+
 #     - name: Upload Release Asset
 #       id: upload-release-asset 
 #       uses: actions/upload-release-asset@v1
