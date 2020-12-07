@@ -98,6 +98,8 @@ jobs:
       run: |
         echo "latest_release: ${latest_release}"        
         gh release create $latest_release
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 #     - name: Upload Release Asset
 #       id: upload-release-asset 
