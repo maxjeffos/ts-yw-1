@@ -94,8 +94,8 @@ jobs:
     - name: Create release
       run: |
         ./scripts/get-latest-tag.sh
-        echo "latest_release: ${latest_release}"        
-        gh release create $latest_release
+        echo "latest_tag: ${latest_tag}"        
+        gh release create $latest_tag
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
