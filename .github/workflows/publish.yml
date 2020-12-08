@@ -93,7 +93,7 @@ jobs:
 
     - name: Create release
       run: |
-        run: ./scripts/get-latest-tag.sh
+        ./scripts/get-latest-tag.sh
         echo "latest_release: ${latest_release}"        
         gh release create $latest_release
       env:
