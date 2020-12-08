@@ -1,6 +1,6 @@
 {
   "name": "@maxjeffos/some-top-level-command",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@maxjeffos/protect": "^1.7.0"
+    "@maxjeffos/protect": "^1.8.0"
   },
   "repository": {
     "type": "git",
