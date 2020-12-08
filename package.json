@@ -1,6 +1,6 @@
 {
   "name": "@maxjeffos/sweetcli",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "",
   "files": [
     "dist",
@@ -32,9 +32,9 @@
     "packages/*"
   ],
   "dependencies": {
-    "@maxjeffos/protect": "^1.9.0",
-    "@maxjeffos/some-top-level-command": "^1.9.0",
-    "@maxjeffos/woof": "^1.9.0",
+    "@maxjeffos/protect": "^1.10.0",
+    "@maxjeffos/some-top-level-command": "^1.10.0",
+    "@maxjeffos/woof": "^1.10.0",
     "source-map-support": "^0.5.19"
   },
   "devDependencies": {
