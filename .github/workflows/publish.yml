@@ -91,11 +91,9 @@ jobs:
     #     owner: maxjeffos
     #     repo: ts-yw-1
 
-    - name: Get latest tag
-      run: ./scripts/get-latest-tag.sh
-
     - name: Create release
       run: |
+        run: ./scripts/get-latest-tag.sh
         echo "latest_release: ${latest_release}"        
         gh release create $latest_release
       env:
