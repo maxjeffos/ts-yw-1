@@ -79,7 +79,8 @@ jobs:
         
     - name: Create binaries with pkg
       run: |
-        npx pkg -t node14-linux-x64 -o sweetcli-node14-linux-x64 .
+        npx pkg -t .
+        # npx pkg -t node14-linux-x64 -o sweetcli-node14-linux-x64 .
         ls -la
 
     - run: echo ${{github.repository}}
