@@ -69,10 +69,15 @@ jobs:
         
     - name: Create binaries with pkg
       run: |
-        npx pkg . -t node14-alpine-x64 -o snyk-alpine
-        npx pkg . -t node12-linux-x64 -o snyk-linux
-        npx pkg . -t node12-macos-x64 -o snyk-macos
-        npx pkg . -t node12-win-x64 -o snyk-win.exe
+        echo '' > dist/STANDALONE
+        npx pkg . -t node14-alpine-x64 -o sweetcli-alpine
+        npx pkg . -t node12-linux-x64 -o sweetcli-linux
+        npx pkg . -t node12-macos-x64 -o sweetcli-macos
+        npx pkg . -t node12-win-x64 -o sweetcli-win.exe
+        # TODO: build docker release
+        # TODO: sign win binary
+        # TODO: shasum for win?
+        shasum -a 256 sweetcli-linux > sweetcli-linux.sha256 && shasum -a 256 sweetcli-macos > sweetcli-macos.sha256 && shasum -a 256 sweetcli-alpine > sweetcli-alpine.sha256
         ls -la
 
     - name: Create release
@@ -80,6 +85,6 @@ jobs:
         latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1))
         echo "latest_tag: ${latest_tag}"        
         gh release create $latest_tag
-        gh release upload $latest_tag snyk-alpine snyk-linux snyk-macos snyk-win.exe
+        gh release upload $latest_tag sweetcli-alpine sweetcli-linux sweetcli-macos sweetcli-win.exe sweetcli-linux.sha256 sweetcli-macos.sha256 sweetcli-alpine.sha256
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
