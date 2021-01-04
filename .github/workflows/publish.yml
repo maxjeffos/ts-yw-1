@@ -43,6 +43,9 @@ jobs:
     - run: ls -la
     - run: git config --global user.email "${{ secrets.GH_USER_EMAIL }}"
     - run: git config --global user.name "${{ secrets.GH_USER }}"
+    - run: |
+       gpg --list-keys
+       gpg --list-secret-keys
 
     - run: npm install -g npm@7
     - run: npm --version
