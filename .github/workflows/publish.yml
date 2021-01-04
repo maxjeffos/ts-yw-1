@@ -47,8 +47,8 @@ jobs:
        gpg --list-keys
        gpg --list-secret-keys
        echo -e "$GPG_KEY" | gpg --import
-       gpg --list-keys
-       gpg --list-secret-keys
+       gpg --list-secret-keys --keyid-format LONG
+       git config --global commit.gpgsign true
       env:
         GPG_KEY: ${{ secrets.GPG_KEY }}
 
