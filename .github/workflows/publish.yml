@@ -50,6 +50,7 @@ jobs:
        gpg --list-secret-keys --keyid-format LONG
        git config --global commit.gpgsign true
        git config --global gpg.program gpg2
+       git config --global user.signingkey C6064194CD57AE96
        echo "test" | gpg2 --clearsign
       env:
         GPG_KEY: ${{ secrets.GPG_KEY }}
